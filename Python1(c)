@@ -1,0 +1,10 @@
+from itertools import combinations
+
+lst = [1, -2, 3, 4, -7]
+
+print("Positive Combinations")
+
+for r in range(len(lst) + 1):
+    for combo in combinations(lst, r):
+        if all(num > 0 for num in combo):
+            print(combo)
